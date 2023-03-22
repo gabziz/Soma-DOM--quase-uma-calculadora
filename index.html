@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/746/746961.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma / DOM</title>
+</head>
+<body>
+
+    <h1> Somando usando <span>DOM</span></h1>
+
+    <br>
+    
+    <input type="number" name="valor1" id="valor1"> +
+    <input type="number" name="valor2" id="valor2">
+    <br>
+    <input type="button" value="Somar" onclick="somar()">
+    <br>
+
+    <div id="resp"></div>
+
+    <script>
+        function somar() {
+
+            var v1 = window.document.getElementById('valor1');
+            var v2 = window.document.querySelector('input#valor2');
+            var resp = window.document.getElementById('resp');
+
+            var n1 = Number(v1.value);
+            var n2 = Number(v2.value);
+            var resultado = n1 + n2;
+
+            resp.innerHTML = `A soma entre  ${n1} e ${n2} é igual a ${resultado}.` 
+        }
+
+    </script>
+
+    
+
+    <footer>Created by Gabrielle Lourenço &copy</footer>
+
+
+    
+</body>
+</html>
